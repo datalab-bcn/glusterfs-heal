@@ -32,21 +32,23 @@ translator.
 Requirements
 ------------
 
-* Source code of GlusterFS 3.3.0 or later, configured, compiled and installed
+* Source code of GlusterFS 3.4.0 or later, configured, compiled and installed
+* The [glusterfs-gfsys](https://forge.gluster.org/disperse/gfsys) library
+* The [glusterfs-dfc](https://forge.gluster.org/disperse/dfc) translator is
+  needed on all bricks
 
 
 Installation
 ------------
 
-* Once the GlusterFS is configured, compiled and installed, edit the Makefile
-  and modify the path to GlusterFS source code in variable *SRCDIR*.
+* Configure, compile and install GlusterFS and glusterfs-gfsys
+* ./autogen.sh
+* ./configure --with-glusterfs=<path to glusterfs> --with-gfsys=<path to gfsys>
 * make
 * make install
 
 This should leave the translator module into the same place where GlusterFS has
 been installed.
-
-The translator is compiled without any optimization for debugging purposes. 
 
 
 Configuration
